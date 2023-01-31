@@ -16,27 +16,42 @@ const Hero = () => {
 
             <div className='text-white max-w-[700px] m-auto h-full w-full flex flex-col justify-center lg:items-start items-center'>
 
-                <h1 className='sm:text-5xl text-4xl font-bold'>I'm Kerim Imamović</h1>
+                <h1 className='sm:text-5xl text-4xl font-bold'>Hi, I'm Kerim Imamović</h1>
 
-                <h2 className='flex sm:text-3xl text-2xl pt-4'>I'm
+                <h2 className='flex sm:text-3xl text-2xl pt-4'>
                     <TypeAnimation
                         sequence={[
-                            'learning', 1000, 
-                            'Frontend', 1000, 
-                            'Development', 1000,
+                            'I come from Sarajevo, B&H', 500,
+                            'I am learning Frontend Development', 500, 
                         ]}
                         wrapper="div"
                         cursor={true}
                         repeat={Infinity}
-                        style={{paddingLeft: '10px' }}
+                        style={{paddingLeft: '5px' }}
                     />
                 </h2>
 
                 <div className='flex justify-between pt-6 max-w-[200px] w-full'>
-                    <FaGithub size={20} className='cursor-pointer'/>
-                    <FaFacebook size={20} className='cursor-pointer'/>
-                    <FaInstagram size={20} className='cursor-pointer'/>
-                    <FaLinkedin size={20} className='cursor-pointer'/>
+                    <a href="https://github.com/kimamovic21/"
+                       target='_blank'
+                    >
+                        <FaGithub size={30} className='cursor-pointer hover:scale-110 duration-100 ease-in-out'/>
+                    </a>
+                    <a href="https://www.facebook.com/imamovic.kerim"          
+                       target='_blank'
+                    >
+                        <FaFacebook size={30} className='cursor-pointer hover:scale-110 duration-100 ease-in-out'/>
+                    </a>
+                    <a href="https://www.instagram.com/k_imamovic" 
+                       target='_blank'
+                    >
+                        <FaInstagram size={30} className='cursor-pointer hover:scale-110 duration-100 ease-in-out'/>
+                    </a>
+                    <a href="https://www.linkedin.com/in/kerim-imamovic-261918165" 
+                       target='_blank'
+                    >
+                        <FaLinkedin size={30} className='cursor-pointer hover:scale-110 duration-100 ease-in-out'/>
+                    </a>
                 </div>
 
             </div>

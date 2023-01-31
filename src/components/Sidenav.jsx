@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {AiOutlineHome, AiOutlineMenu, AiOutlineProject, AiOutlineMail} from 'react-icons/ai';
+import {AiOutlineHome, AiOutlineMenu, AiOutlineProject, AiOutlineMail, AiOutlineClose} from 'react-icons/ai';
 import {GrProjects} from 'react-icons/gr';
 import {BsPerson} from 'react-icons/bs';
 
@@ -16,31 +16,49 @@ const Sidenav = () => {
     <div>
 
       {/* handleNav will toggle our state back and forth */}
-      <AiOutlineMenu onClick={handleNav} className='absolute top-4 right-4 z-[99] cursor-pointer md:hidden'/>
+      { nav ?  
+        (<AiOutlineClose size={40} onClick={handleNav} className='fixed top-4 right-4 z-[99] cursor-pointer md:hidden text-black bg-white/90 p-2 rounded-full'/>) : 
+        (<AiOutlineMenu size={40} onClick={handleNav} className='fixed top-4 right-4 z-[99] cursor-pointer md:hidden text-white bg-black/50 p-2 rounded-full'/>)
+      }
 
       {/* if nav state is true */}
       {
         nav ? (
-          <div className='fixed w-full h-screen bg-white/10 flex flex-col justify-center items-center z-20'>
-              <a href="#main" className='w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-100 m-2 p-4 cursor-pointer hover:scale-105 ease-in-out duration-200'>
-                <AiOutlineHome size={20}/>
-                <span className='pl-4'>Home</span>
+          <div className='fixed w-full h-screen bg-black/80 flex flex-col justify-center items-center z-20'>
+              <a href="#main" 
+                 className='w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-100 m-2 p-4 cursor-pointer hover:scale-105 ease-in-out duration-200'
+                 onClick={handleNav}
+              >
+                  <AiOutlineHome size={20}/>
+                  <span className='pl-4'>Home</span>
               </a>
-              <a href="#work" className='w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-100 m-2 p-4 cursor-pointer hover:scale-105 ease-in-out duration-200'>
-                <GrProjects size={20}/>
-                <span className='pl-4'>Work</span>
+              <a href="#work" 
+                 className='w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-100 m-2 p-4 cursor-pointer hover:scale-105 ease-in-out duration-200'
+                 onClick={handleNav} 
+              >
+                  <GrProjects size={20}/>
+                  <span className='pl-4'>Work</span>
               </a>
-              <a href="#projects" className='w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-100 m-2 p-4 cursor-pointer hover:scale-105 ease-in-out duration-200'>
-                <AiOutlineProject size={20}/>
-                <span className='pl-4'>Projects</span>
+              <a href="#projects"
+                 className='w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-100 m-2 p-4 cursor-pointer hover:scale-105 ease-in-out duration-200'
+                 onClick={handleNav} 
+              >
+                  <AiOutlineProject size={20}/>
+                  <span className='pl-4'>Projects</span>
               </a>
-              <a href="#main" className='w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-100 m-2 p-4 cursor-pointer hover:scale-105 ease-in-out duration-200'>
-                <BsPerson size={20}/>
-                <span className='pl-4'>Resume</span>
+              <a href="#main" 
+                 className='w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-100 m-2 p-4 cursor-pointer hover:scale-105 ease-in-out duration-200'
+                 onClick={handleNav}
+              >
+                  <BsPerson size={20}/>
+                  <span className='pl-4'>Resume</span>
               </a>
-              <a href="#contact" className='w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-100 m-2 p-4 cursor-pointer hover:scale-105 ease-in-out duration-200'>
-                <AiOutlineMail size={20}/>
-                <span className='pl-4'>Contact</span>
+              <a href="#contact" 
+                 className='w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-100 m-2 p-4 cursor-pointer hover:scale-105 ease-in-out duration-200'
+                 onClick={handleNav}
+              >
+                  <AiOutlineMail size={20}/>
+                  <span className='pl-4'>Contact</span>
               </a>
           </div>
         ) : (

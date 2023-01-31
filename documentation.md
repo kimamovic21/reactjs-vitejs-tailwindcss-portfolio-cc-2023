@@ -17,3 +17,7 @@
 17. otvaramo i uredujemo Project.jsx komponentu
 18. kreiramo ProjectItem.jsx komponentu
 19. otvaramo i uredujemo ProjecItem.jsx komponentu
+20. kreiramo Contact.jsx komponentu
+21. otvaramo i uredujemo Contact.jsx komponentu
+22. kreiramo Footer.jsx komponentu
+23. otvaramo i uredujemo Footer.jsx komponentu
