@@ -1,12 +1,9 @@
 {
-  "homepage": "https://github.com/kimamovic21/reactjs-vitejs-tailwindcss-portfolio-cc-2023",
   "name": "reactjs-vitejs-tailwindcss-portfolio-cc-2023",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
